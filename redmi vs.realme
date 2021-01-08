@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-remove {
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h2>Comparison Table</h2>
+
+<table>
+  <tr>
+    <th style="width:50%">Features</th>
+    <th>Redmi 9</th>
+    <th>Realme C15</th>
+  </tr>
+  <tr>
+    <td>Display(Inches)</td>
+    <td>6.53 Inches</td>
+    <td>6.50 Inches</td>
+  </tr>
+  <tr>
+    <td>processor</td>
+    <td>Octa-core</td>
+    <td>Octa-core</td>
+  </tr>
+  <tr>
+    <td>RAM</td>
+    <td>4GB</td>
+    <td>3GB</td>
+  </tr>
+  <tr>
+    <td>Internal storage</td>
+    <td>64 GB</td>
+    <td>32 GB</td>
+  </tr>
+  <tr>
+    <td>Battery(mAh)</td>
+    <td>5000 mAh</td>
+    <td>6000 mAh</td>
+  </tr>
+   <tr>
+    <td>Protection type</td>
+    <td>-</td>
+    <td>Gorilla Glass</td>
+  </tr>
+   <tr>
+    <td>Rear camera</td>
+    <td>13 Megapixel+2-megapixel</td>
+    <td>13-megapixel+8-megapixel+2-megapixel+2-megapixel</td>
+  </tr>
+   <tr>
+    <td>Front-camera</td>
+    <td>5-megapixel</td>
+    <td>8-megapixel</td>
+  </tr>
+</table>
+
+</body>
+</html>

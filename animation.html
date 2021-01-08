@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+<hr>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('Apple')"> Apple</button>
+  <button class="btn" onclick="filterSelection('samsung')"> Samsung</button>
+  <button class="btn" onclick="filterSelection('people')"> vivo</button>
+  <button class="btn" onclick="filterSelection('people')"> oppo</button>
+  <button class="btn" onclick="filterSelection('people')"> Redmi</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column Apple">
+    <div class="content">
+      <img src="apple logo.png"  style="width:100%">
+      <h4>logo</h4>
+    </div>
+  </div>
+  <div class="column Apple">
+    <div class="content">
+      <img src="iphone10.jpg"style="width:100%">
+      <h4>Iphone10</h4>
+    </div>
+  </div>
+  <div class="column Apple">
+    <div class="content">
+    <img src="iphone11.jpg"  style="width:100%">
+      <h4>iphone11</h4>
+    </div>
+  </div>
+  <div class="column Apple">
+    <div class="content">
+    <img src="iphone11pro.jpg"style="width:100%">
+      <h4>iphone11 pro</h4>
+      </div>
+    </div>
+      <div class="column Apple">
+        <div class="content">
+          <img src="i12.jpg"style="width:100%">
+          <h4>iphone 12</h4>
+        </div>
+  </div>
+  <div class="column Apple">
+    <div class="content">
+      <img src="iphone XR.jpg" style="width:100%">
+      <h4>Iphone XR</h4>
+    </div>
+  </div>
+  
+  <div class="column samsung">
+    <div class="content">
+      <img src="m30.jpg"  style="width:100%">
+      <h4>Samsung galaxy M30</h4>
+    </div>
+  </div>
+  <div class="column samsung">
+    <div class="content">
+    <img src="galaxy s20.jpg"  style="width:100%">
+      <h4>Samsung Galaxy S20</h4>
+    </div>
+  </div>
+  <div class="column samsung">
+    <div class="content">
+    <img src="galaxy f41.jpg"  style="width:100%">
+      <h4>Samsung Galaxy F41</h4>
+    </div>
+  </div>
+  <div class="column samsung">
+    <div class="content">
+      <img src="galaxy m31.jpg" style="width:100%">
+      <h4>Samsung Galaxy M31</h4>
+    </div>
+  </div>
+  <div class="column samsung">
+    <div class="content">
+      <img src="galaxy a70.jpg" style="width:100%">
+      <h4>Samsung Galaxy A70</h4>
+
+  <div class="column vivo">
+    <div class="content">
+      <img src="y12.jpg"  style="width:100%">
+      <h4>Vivo Y12</h4>
+    </div>
+  </div>
+  <div class="column vivo">
+    <div class="content">
+    <img src="y17.jpg"  style="width:100%">
+      <h4>Vivo Y17</h4>
+    </div>
+  </div>
+  <div class="column vivo">
+    <div class="content">
+    <img src="v19.jpg"  style="width:100%">
+      <h4>Vivo V19</h4>
+    </div>
+  </div>
+  <div class="column vivo">
+    <div class="content">
+      <img src="s5.jpg" style="width:100%">
+      <h4>Vivo S5</h4>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

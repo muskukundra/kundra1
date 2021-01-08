@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+  #mydiv{
+    width:100vh;
+    height:100vh;
+    background-image: url("iphone XR.jpg");
+background-repeat:no-repeat;
+    position:absolute;
+    animation:mymove 10s infinite;
+  }
+  @keyframes mymove {
+  from {left: 0px;}
+  to {left: 1400px;}
+}
+
+@keyframes mynewmove {
+  from {right: : 0px;}
+  to {right: 1400px;}
+}
+#myDIV {
+  width: 100vh;
+  height: 100vh;
+  background-image: url("galaxy m31.jpg");
+  position: absolute;
+  background-repeat: no-repeat;
+  animation: mymove 8s infinite;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 1400px;}
+}
+
+@keyframes mynewmove {
+  from {right: : 0px;}
+  to {right: 1400px;}
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to change the value of the animation property.</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.animation = "mynewmove 4s 2";
+}
+function myFunction(){
+  document.getElementById("mydiv").style.animation="mynewmoe 2s 3";
+}
+</script>
+<div id="mydiv"></div>
+<div id="myDIV"></div>
+
+</body>
+</html>
